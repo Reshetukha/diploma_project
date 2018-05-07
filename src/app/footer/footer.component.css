@@ -1,0 +1,5 @@
+div#footer-wrap {
+    height: 250px;
+    background-image: url("/assets/img/dark_footer_background.jpg");
+    color: white;
+}

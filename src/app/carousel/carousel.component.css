@@ -1,0 +1,9 @@
+div#carousel-wrap {
+    /* width: 800px; */
+    height: 480px;
+}
+
+img {
+    width: inherit;
+    height: 480px;
+}
