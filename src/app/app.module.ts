@@ -17,7 +17,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { NewsService } from './news.service';
-
+import { ShortNewsComponent } from './short-news/short-news.component';
+ 
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewsService } from './news.service';
     SpecialOffersComponent,
     AboutUsComponent,
     ContactsComponent,
-    SitemapComponent
+    SitemapComponent,
+    ShortNewsComponent
   ],
   imports: [
     BrowserModule,

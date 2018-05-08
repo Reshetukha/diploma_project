@@ -3,6 +3,7 @@ div.footer-wrap {
     height: transparent;
     background-image: url("/assets/img/dark_footer_background.jpg");
     background-position: bottom;
+    margin-top: 50px;
     color: #F5F5F5;
 }
 

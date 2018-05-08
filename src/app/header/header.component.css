@@ -3,6 +3,7 @@ div.header-wrap {
     height: transparent;
     background-image: url("/assets/img/dark_footer_background.jpg");
     color: #F5F5F5;
+    margin-bottom: 50px;
 }
 
 a {
