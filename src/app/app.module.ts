@@ -10,6 +10,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { NewsComponent } from './news/news.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
+import { SpecialOffersComponent } from './special-offers/special-offers.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { SitemapComponent } from './sitemap/sitemap.component';
+import { NewsService } from './news.service';
 
 
 @NgModule({
@@ -18,7 +25,13 @@ import { CarouselComponent } from './carousel/carousel.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    CarouselComponent
+    CarouselComponent,
+    NewsComponent,
+    TechnologiesComponent,
+    SpecialOffersComponent,
+    AboutUsComponent,
+    ContactsComponent,
+    SitemapComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +41,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     HttpClientModule,
     NgbModule.forRoot()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [NewsService]
 })
 export class AppModule { }
