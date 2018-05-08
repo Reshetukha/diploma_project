@@ -1,5 +1,59 @@
-div#footer-wrap {
-    height: 250px;
+div.footer-wrap {
+    border-top: 3px solid black;
+    height: transparent;
     background-image: url("/assets/img/dark_footer_background.jpg");
-    color: white;
+    background-position: bottom;
+    color: #F5F5F5;
+}
+
+div.col {
+    padding: 15px;
+}
+
+div.align-right {
+    text-align: right;
+    float: right;
+}
+
+div.img-wrapper {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+div.eight-px {
+    height: 8px;
+}
+
+div#socials {
+    align-content: center;
+}
+
+p {
+    color:#D3D3D3;
+}
+
+input#FormInput {
+    width: 250px;
+}
+
+button.btn-light {
+    margin-left: 15px;
+}
+
+h4 {
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+div#contacts {
+    text-align: right;
+}
+
+span {
+    color: #C0C0C0;
+}
+
+img {
+    height: 40px;
+    width: 40px;
 }
