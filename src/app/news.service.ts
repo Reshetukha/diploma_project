@@ -15,4 +15,8 @@ export class NewsService {
   getLastNews(): Observable<NewsUnit[]> {
     return Observable.of(NEWS.slice(-3));
   }
+
+  getNews(id): Observable<NewsUnit> {
+    return Observable.of(NEWS.find( item => item.id === id));
+  }
 }

@@ -18,6 +18,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { NewsService } from './news.service';
 import { ShortNewsComponent } from './short-news/short-news.component';
+import { NewsDetailsComponent } from './news-details/news-details.component';
  
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ShortNewsComponent } from './short-news/short-news.component';
     AboutUsComponent,
     ContactsComponent,
     SitemapComponent,
-    ShortNewsComponent
+    ShortNewsComponent,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<div class="container">
+  <div *ngIf="news">
+    <div class="row align-items-center margin50">
+      <div class="col-8">
+        <div style="
+            height: 406px;
+            width: 720px;
+            background: black;
+          ">
+        </div>
+      </div>
+        <div class="col-4 align-self-start">
+          <div class="row">
+            <div class="col">
+            <h3>{{news.title}}</h3>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <h4>{{news.date}}</h4>
+              </div>
+            </div>
+          <div class="row margin15">
+            <span>{{news.description}}
+            </span>
+          </div>
+      </div>
+    </div>
+    <div class="row align-items-center margin50">
+      <span>{{news.text}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-dark read-more" (click)="goBack()">Повернутися</button>
+  </div>
+</div>

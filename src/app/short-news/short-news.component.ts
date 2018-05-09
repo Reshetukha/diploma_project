@@ -17,10 +17,12 @@ export class ShortNewsComponent implements OnInit {
   ngOnInit() {
     this.getNews();
     this.news.map( item => {
-      console.log(item.text.length);
       if ( item.text.length < 250 ) return item;
       item.text = item.text.slice(0, 250) + ' ...';
       return item;
+    });
+    this.news = this.news.sort( (a, b) => {
+      return b.id - a.id;
     });
   }
 

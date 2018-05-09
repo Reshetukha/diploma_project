@@ -1,0 +1,20 @@
+.margin50 {
+    margin-top: 50px;
+}
+
+.read-more {
+    margin-top: 30px;
+    /* width: 70px; */
+}
+
+.margin15 {
+    margin-top: 15px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-items-center {
+    text-align: center;
+}
