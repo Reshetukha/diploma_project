@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../news.service';
 
 @Component({
   selector: 'app-sitemap',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitemapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private newsService: NewsService) { }
+
+  newsIds : number[];
+  public isCollapsed = true;  
 
   ngOnInit() {
+    this.getNewsIDs();
   }
 
+  getNewsIDs(): void {
+    this.newsService.getNewsIds()
+      .subscribe( id => this.newsIds = id);
+  }
 }

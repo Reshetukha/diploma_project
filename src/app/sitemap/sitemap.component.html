@@ -1,3 +1,43 @@
-<p>
-  sitemap works!
-</p>
+<div class="container">
+  <div class="row">
+    <h3>Карта сайту.</h3>
+  </div>
+  <div class="row">
+    <h4><a routerLink="/main">main</a></h4>
+  </div>
+  <div class="row">
+    <div>
+      <h4><a routerLink="/news">news</a></h4>
+    </div>
+    <button type="button" class="btn btn-sm btn-dark margin-left-15" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="isCollapsed" aria-controls="collapseNews">
+    Детально:
+    </button>
+  </div>
+  <div class="row">
+    <div id="collapseNews" [ngbCollapse]="isCollapsed">
+      <div *ngIf="newsIds" class="margin-top-30">
+        <div *ngFor='let id of newsIds'>
+          <div class="margin-left-70">
+            <h5><a routerLink="/news/{{id}}">news/{{id}}</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <h4><a routerLink="/technologies">technologies</a></h4>
+    </div>
+    <div class="row">
+      <h4><a routerLink="/special_offers">special_offers</a></h4>
+    </div>
+    <div class="row">
+      <h4><a routerLink="/about_us">about_us</a></h4>
+    </div>
+    <div class="row">
+      <h4><a routerLink="/contacts">contacts</a></h4>
+    </div>
+    <div class="row">
+      <h4><a routerLink="/sitemap">sitemap</a></h4>
+    </div>
+</div>

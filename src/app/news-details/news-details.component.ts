@@ -27,9 +27,8 @@ export class NewsDetailsComponent implements OnInit {
 
   getNews(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
     this.newsService.getNews(id)
-      .subscribe(news => {this.news = news; console.log(this.news)});
+      .subscribe( news => this.news = news );
   }
 
   goBack(): void {
