@@ -1,17 +1,71 @@
 <div class="container">
   <div class="row">
-    <h1 class="large">Контакти</h1>
-  </div>
-  <div class="row">
-    <div class="col">
-        <h1>Контакти</h1>
-    </div>
-    <div class="col">
+      <div class="col">
+        <div class="row">
+          <h1 class="large">Контакти</h1>
+        </div>
+
+        <div *ngIf='adress'>
+          <div *ngFor='let adr of adress' class="margin-bot-25">
+            <div class="row">
+              <h2>Мiсто: {{adr.city}}</h2>
+            </div>
+            <div class="row">
+              <h4>Телефон: {{adr.tel}}</h4>
+            </div>
+            <div class="row">
+              <h4>Почтова скринька:</h4>
+            </div>
+            <div class="row">
+              <h4>{{adr.mail[0]}}</h4>
+            </div>
+            <div class="row">
+              <h4>{{adr.mail[1]}}</h4>
+            </div>
+            <div class="row">
+                <h4>{{adr.adress[0]}}</h4>
+            </div>
+            <div class="row">
+                <h3>{{adr.adress[1]}}</h3>
+            </div>
+          </div>
+        </div>
 
 
-
-
-
-    </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <ngb-tabset [justify]="currentJustify">
+            <ngb-tab id="tab-selectbyid1" title="Київ">
+              <ng-template ngbTabContent>
+                <iframe class="margin-top-20" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d10709.099656778679!2d30.573348692223288!3d50.4243770233484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d50.4204248!2d30.5847645!5e1!3m2!1suk!2sua!4v1525917809516" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab id="tab-selectbyid2" title="Харькiв">
+              <ng-template ngbTabContent>
+                <iframe class="margin-top-20" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2411.0397888758466!2d36.325501535034256!3d49.977510365012826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d49.9764372!2d36.328390299999995!5e1!3m2!1suk!2sua!4v1525919507320" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab id="tab-selectbyid3" title="Одеса">
+              <ng-template ngbTabContent>
+                <iframe class="margin-top-20" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4996.865711432646!2d30.701901234842648!3d46.47923211400668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d46.476817399999995!2d30.7065579!5e1!3m2!1suk!2sua!4v1525919726176" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>  
+        </div>
+        <div class="row margin-top-20">
+          <h2>Гаряча лінія:</h2>
+          <h2>+380-23 992-25-51</h2>
+        </div>
+      </div>
   </div>
 </div>
+
+
+
+<!-- <div class="row">
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+</div> -->
