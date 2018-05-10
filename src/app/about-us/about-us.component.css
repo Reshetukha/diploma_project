@@ -1,0 +1,13 @@
+img {
+    /* height: inherit; */
+    width: inherit;
+}
+
+.margin-bot-50 {
+    margin-bottom: 50px;
+}
+
+p {
+    margin-top: 25px;
+    text-align: justify;
+}
