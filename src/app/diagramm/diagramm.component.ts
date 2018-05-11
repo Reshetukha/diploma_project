@@ -14,8 +14,8 @@ export class DiagrammComponent implements OnInit, OnChanges {
   @ViewChild('chartB') private chartContainerB: ElementRef;
 
   private margin: any = { top: 20, bottom: 20, left: 30, right: 20};
-  private chartA: any;
-  private chartB: any;
+  // private chartA: any;
+  // private chartB: any;
   private width: number;
   private height: number;
   private xScale: any;
@@ -23,25 +23,25 @@ export class DiagrammComponent implements OnInit, OnChanges {
   private xScaleE: any;
   private xScaleB: any;
   private yScaleB: any;
-  private colors: any;
+  // private colors: any;
   private xAxisE: any;
   private yAxisE: any;
   private xAxisB: any;
   private yAxisB: any;
-  private xDomainA: any;
-  private yDomainA: any;
-  private xDomainB: any;
-  private yDomainB: any;
+  // private xDomainA: any;
+  // private yDomainA: any;
+  // private xDomainB: any;
+  // private yDomainB: any;
   private elPower: any;
   private elTorque: any;
   private BPower: any;
   private BTorque: any;
-  private rawDataB: any;
-  private dataA: any;
-  private dataB: any;
-  private svg: any;
+  // private rawDataB: any;
+  // private dataA: any;
+  // private dataB: any;
+  // private svg: any;
 
-  selectedCurve = 'curveLinear';
+  // selectedCurve = 'curveLinear';
 
   constructor() { }
 

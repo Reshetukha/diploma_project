@@ -1,0 +1,46 @@
+.card-left {
+    color: #fff;
+    height: 20rem;
+    /* background: url(/assets/img/Tesla-Model-S-motor.jpg) center no-repeat; */
+    background-size: cover;
+    border-radius: 0rem;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    width: 100%;
+  }
+
+.col {
+    padding: 0px;
+}
+
+.card-right {
+    height: 100%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0rem;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.read-more {
+    margin-top: 30px;
+}
+
+.margin-bot-30px {
+    margin-bottom: 50px;
+}
+
+img {
+    width: inherit;
+    border-radius: 0rem;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    width: 100%;
+}

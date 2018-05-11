@@ -11,6 +11,16 @@ h1.large {
     margin-bottom: 25px;
 }
 
+:host /deep/ a.nav-link {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+:host /deep/ a.nav-link:hover {
+    border: 0px solid transparent;
+    border-radius: 0.25rem;
+}
+
 :host /deep/ a{ 
     color: black;
 }
