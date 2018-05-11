@@ -1,0 +1,51 @@
+/* .axis path, .axis line {
+    fill: none;
+    stroke: #333;
+}
+.axis .grid-line {
+    stroke: #000;
+    stroke-opacity: 0.2;
+}
+.axis text {
+    font: 10px Verdana;
+} */
+
+.d3-chart {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .d3-chart .axis path,
+  .d3-chart .axis line {
+    stroke: #999;
+  }
+  
+  .d3-chart .axis text {
+    fill: #999;
+  }
+
+
+  /* h2 {
+    color: #2ecc71;
+  } */
+  
+  /* .axis path,
+  .axis line {
+    fill: none;
+    stroke: #95a5a6;
+    shape-rendering: crispEdges;
+  }
+  
+  .axis text {
+    fill: #95a5a6;
+  } */
+  
+  /* .x.axis path {
+    display: none;
+  } */
+  
+  /* .line {
+    fill: none;
+    stroke: #2ecc71;
+    stroke-width: 1.5px;
+  } */
