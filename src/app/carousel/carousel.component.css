@@ -1,9 +1,18 @@
 div#carousel-wrap {
-    /* width: 800px; */
     height: 480px;
+    outline: none;
 }
 
 img {
-    width: inherit;
+
+    width: auto;
     height: 480px;
+    max-height: 480px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+:focus {
+    outline: none;
 }

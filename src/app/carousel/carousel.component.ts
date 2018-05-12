@@ -13,35 +13,26 @@ import { Observable } from 'rxjs';
 
 export class CarouselComponent implements OnInit {
 
-  imgUri = ['./assets/img/test1.jpg',
-            './assets/img/test2.jpg',
-            './assets/img/test3.jpg'];
+  imgUri = ['./assets/img/Tesla-logo.png',
+            './assets/img/Tesla-presentation-2.jpg',
+            './assets/img/Tesla-presentation.jpg',
+            './assets/img/Tesla-presentation-3.png'];
 
-  // images: String[];
   images: Array<string>
 
   constructor(config: NgbCarouselConfig) {
-    config.interval = 10000;
-    config.wrap = false;
+    config.interval = 3000;
+    config.wrap = true;
     config.keyboard = false;
   }
-  // constructor(private _http: HttpClient) { }
 
   ngOnInit() {
     this.getImages()
       .subscribe(images => this.images = images);
   }
 
-  // Observable<String[]>
-
   getImages(): Observable<Array<string>> {
     return Observable.of(this.imgUri);
   }
 
 }
-
-//   constructor(private _http: HttpClient) {}
-//   ngOnInit() {
-//     this._http.get('https://picsum.photos/list')
-//         .subscribe(images => this.images = images);
-//   }
