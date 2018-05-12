@@ -1,7 +1,6 @@
 .card-left {
     color: #fff;
     height: 20rem;
-    /* background: url(/assets/img/Tesla-Model-S-motor.jpg) center no-repeat; */
     background-size: cover;
     border-radius: 0rem;
     border-top-left-radius: 0.75rem;
@@ -39,8 +38,8 @@
 
 img {
     width: inherit;
-    border-radius: 0rem;
-    border-top-left-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
-    width: 100%;
+}
+
+.hidden {
+    overflow: hidden;
 }

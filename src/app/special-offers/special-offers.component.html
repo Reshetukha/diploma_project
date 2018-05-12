@@ -4,15 +4,15 @@
     <div *ngFor='let car of cars' class="margin-bot-30px">
       <div class="row">
         <!-- <div class="col card-left"> -->
-        <div class="col card-left">
+        <div class="col card-left hidden">
             <img src={{car.img_src}} >
         </div>
     <div class="col">
       <div class="card-right">
         <div class="card-body">
-          <h5 class="card-title">Title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">data</small></p>
+          <h5 class="card-title">{{car.title}}</h5>
+          <p class="card-text">{{car.description}}</p>
+          <p class="card-text"><small class="text-muted">{{car.date}}</small></p>
           <!-- <div class="col align-self-end"> -->
           <div class="row justify-content-center read-more">
               <a routerLink="/123"><button type="button" class="btn btn-dark">Read more..</button></a>
