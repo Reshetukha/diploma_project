@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
+import { CarsService } from '../cars.service';
 
 @Component({
   selector: 'app-sitemap',
@@ -8,17 +9,29 @@ import { NewsService } from '../news.service';
 })
 export class SitemapComponent implements OnInit {
 
-  constructor(private newsService: NewsService) { }
+  constructor(
+    private newsService: NewsService,
+    private carsService: CarsService
+  ) { }
 
   newsIds : number[];
-  public isCollapsed = true;  
+  carsIds : number[];
+
+  public isCollapsed = true;
+  public isCollapsedCars = true; 
 
   ngOnInit() {
     this.getNewsIDs();
+    this.getCarsIDs();
   }
 
   getNewsIDs(): void {
     this.newsService.getNewsIds()
       .subscribe( id => this.newsIds = id);
+  }
+
+  getCarsIDs(): void {
+    this.carsService.getCarsIds()
+      .subscribe( id => this.carsIds = id);
   }
 }

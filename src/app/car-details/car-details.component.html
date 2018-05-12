@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="row justify-content-center">
+    <h1>{{car.title}}</h1>
+  </div>
+
+  <div class="row justify-content-center margin-bot-30">
+    <img src={{car.img_src2}} style="
+      height: 600px;
+    ">
+  </div>
+
+  <div class="row margin-bot-30">
+    <p>{{car.text}}</p>
+  </div>
+
+  <div class="row margin-bot-30">
+    <div class="col">
+        <img src={{car.img_src3}} style="
+          width: 100%;
+        ">
+    </div>
+    <div class="col">
+      <p>{{car.text2}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <button type="button" class="btn btn-dark" (click)="goBack()">Повернутися</button>
+  </div>
+
+</div>

@@ -10,11 +10,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SitemapComponent } from './sitemap/sitemap.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
-
+import { CarDetailsComponent } from './car-details/car-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
+  { path: 'car/:id', component: CarDetailsComponent},
   { path: 'news', component: NewsComponent },
   { path: 'news/:id', component: NewsDetailsComponent },
   { path: 'technologies', component: TechnologiesComponent },

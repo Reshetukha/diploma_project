@@ -21,6 +21,7 @@ import { ShortNewsComponent } from './short-news/short-news.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { DiagrammComponent } from './diagramm/diagramm.component';
 import { CarsService } from './cars.service';
+import { CarDetailsComponent } from './car-details/car-details.component';
  
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CarsService } from './cars.service';
     SitemapComponent,
     ShortNewsComponent,
     NewsDetailsComponent,
-    DiagrammComponent
+    DiagrammComponent,
+    CarDetailsComponent
   ],
   imports: [
     BrowserModule,

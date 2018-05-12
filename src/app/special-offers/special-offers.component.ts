@@ -14,8 +14,8 @@ export class SpecialOffersComponent implements OnInit {
   constructor(private carsService: CarsService) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.getCars();
-    console.log(this.cars);
   }
 
   getCars(): void {

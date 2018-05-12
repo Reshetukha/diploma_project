@@ -12,4 +12,14 @@ export class CarsService {
     return Observable.of(CARS);
   }
 
+  getCarWithId(id: number) : Observable<CarUnit> {
+    return Observable.of(CARS.find( item => item.id === id));
+  }
+
+  getCarsIds(): Observable<number[]> {
+    let IDs = [];
+    CARS.forEach( item => IDs.push(item.id));
+    return Observable.of(IDs);
+  }
+
 }
