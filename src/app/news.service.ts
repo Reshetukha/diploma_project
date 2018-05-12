@@ -13,7 +13,7 @@ export class NewsService {
   }
 
   getLastNews(): Observable<NewsUnit[]> {
-    return Observable.of(NEWS.slice(-3));
+    return Observable.of(NEWS.slice(0, 3));
   }
 
   getNews(id): Observable<NewsUnit> {

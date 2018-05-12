@@ -2,19 +2,14 @@
   <div *ngIf="news.length">
     <div *ngFor='let new of news' class="row align-items-center margin50">
       <div class="col">
-        <div style="
-            height: 300px;
-            width: 531px;
-            background: black;
-          ">
-        </div>
+        <img src={{new.img_src}} >
       </div>
         <div class="col align-self-start">
           <div class="row">
-            <div class="col">
+            <div class="col-7">
               <h3>{{new.title}}</h3>
             </div>
-            <div class="col align-right">
+            <div class="col-5 align-right">
               <h4>{{new.date}}</h4>
             </div>
           </div>
@@ -23,7 +18,7 @@
             </span>
           </div>
         <div class="row">
-              <a routerLink="/news/{{new.id}}"><button type="button" class="btn btn-dark read-more">Read more..</button></a>
+          <a routerLink="/news/{{new.id}}" class="margin-left-15"><button type="button" class="btn btn-dark read-more">Детальнiше</button></a>
         </div>
       </div>
     </div>

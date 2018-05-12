@@ -21,9 +21,9 @@ export class NewsComponent implements OnInit {
     //   item.text = item.text.slice(0, 250) + ' ...';
     //   return item;
     // });
-    this.news = this.news.sort( (a, b) => {
-      return b.id - a.id;
-    });
+    // this.news = this.news.sort( (a, b) => {
+    //   return b.id - a.id;
+    // });
   }
 
   getNews(): void {

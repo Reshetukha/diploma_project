@@ -4,7 +4,6 @@
 
 .read-more {
     margin-top: 30px;
-    /* width: 70px; */
 }
 
 .margin15 {
@@ -13,4 +12,16 @@
 
 .align-right {
     text-align: right;
+}
+
+span {
+    margin-left: 15px;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+img {
+    width: 100%;
 }

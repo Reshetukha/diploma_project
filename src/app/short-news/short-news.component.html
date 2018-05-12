@@ -3,12 +3,7 @@
   <div *ngIf="news.length">
     <div *ngFor='let new of news' class="row align-items-center margin50">
       <div class="col">
-        <div style="
-            height: 300px;
-            width: 531px;
-            background: black;
-          ">
-        </div>
+        <img src={{new.img_src}} >
       </div>
         <div class="col align-self-start">
           <div class="row">
@@ -24,7 +19,7 @@
             </span>
           </div>
         <div class="row">
-              <a routerLink="/news/{{new.id}}"><button type="button" class="btn btn-dark read-more">Read more..</button></a>
+              <a routerLink="/news/{{new.id}}" class="margin-left-15"><button type="button" class="btn btn-dark read-more">Read more..</button></a>
         </div>
       </div>
     </div>

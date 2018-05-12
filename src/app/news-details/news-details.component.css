@@ -18,3 +18,15 @@
 .align-items-center {
     text-align: center;
 }
+
+img {
+    width: 100%;
+}
+
+p {
+    text-align: left;
+}
+
+.justify {
+    text-align: justify;
+}

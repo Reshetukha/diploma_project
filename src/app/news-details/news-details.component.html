@@ -2,12 +2,7 @@
   <div *ngIf='news'>
     <div class="row align-items-center margin50">
       <div class="col-8">
-        <div style="
-            height: 406px;
-            width: 720px;
-            background: black;
-          ">
-        </div>
+          <img src={{news.img_src}} >
       </div>
         <div class="col-4 align-self-start">
           <div class="row">
@@ -21,13 +16,13 @@
               </div>
             </div>
           <div class="row margin15">
-            <span>{{news.description}}
-            </span>
+            <p>{{news.description}}
+            </p>
           </div>
       </div>
     </div>
     <div class="row align-items-center margin50">
-      <span>{{news.text}}</span>
+      <p class="justify">{{news.text}}</p>
     </div>
   </div>
   <div class="row">
