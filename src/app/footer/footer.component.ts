@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
+
+  closeResult: string;
+  subscriptionField: string;
+
+  subscriptions: string[];
 
   ngOnInit() {
+    this.subscriptionField = '';
+    this.subscriptions = [];
+  }
+
+  subscribe(): void {
+    console.log('sub= ', this.subscriptionField);
+    if ( this.subscriptionField !== '') {
+      this.subscriptionField = '';
+    }
+  }
+
+  open(content) {
+    this.modalService.open(content).result.then((result) => {
+      console.log('close button');
+      this.addSubscription();
+    }, (reason) => {
+      console.log('dismiss');
+      this.addSubscription();
+    });
+  }
+
+  addSubscription(): void {
+    this.subscriptions.push(this.subscriptionField);
+    this.subscriptionField = '';
+    console.log(this.subscriptions);
   }
 
 }

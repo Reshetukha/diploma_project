@@ -5,10 +5,30 @@
                 <h3>Залишайся на зв'язку</h3>
                 <p>Підписатися на розсилку новин</p>
                 <div class="row">
-                    <form class="form-inline">
-                        <input type="email" class="form-control" id="FormInput" placeholder="введіть Email">
-                        <button type="button" class="btn btn-light">Підписатися</button>
-                    </form>
+                    <input [(ngModel)]="subscriptionField" type="email" class="form-control" id="FormInput" placeholder="введіть Email">
+
+                    <!-- //////////////////////////////////////// -->
+
+                    <ng-template #content let-c="close" let-d="dismiss">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Дякуємо за пiдписку!</h4>
+                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-header">
+                            <h3 class="modal-title">{{subscriptionField}}</h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Закрити</button>
+                        </div>
+                    </ng-template>   
+                    <button class="btn btn-light" (click)="open(content)">Підписатися</button>
+                    <hr>
+                    <pre>{{closeResult}}</pre>
+
+                    <!-- //////////////////////////////////////// -->
+                    <!-- <button (click)="subscribe()" type="button" class="btn btn-light">Підписатися</button> -->
                 </div>
             </div>
             <div class="col align-right">
