@@ -12,7 +12,7 @@ import { NewsService } from '../news.service';
 })
 export class NewsDetailsComponent implements OnInit {
 
-  news: NewsUnit;
+  private news: NewsUnit;
 
   constructor(
     private newsService: NewsService,

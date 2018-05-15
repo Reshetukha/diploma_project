@@ -12,7 +12,7 @@ import { CarsService } from '../cars.service';
 })
 export class CarDetailsComponent implements OnInit {
 
-  car: CarUnit;
+  private car: CarUnit;
 
   constructor(
     private carsService: CarsService,

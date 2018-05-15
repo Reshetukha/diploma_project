@@ -10,20 +10,12 @@ import { NewsService } from '../news.service';
 
 export class ShortNewsComponent implements OnInit {
 
-  news: NewsUnit[];
+  private news: NewsUnit[];
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.getNews();
-    // this.news.map( item => {
-    //   if ( item.text.length < 250 ) return item;
-    //   item.text = item.text.slice(0, 250) + ' ...';
-    //   return item;
-    // });
-    // this.news = this.news.sort( (a, b) => {
-    //   return b.id - a.id;
-    // });
   }
 
   getNews(): void {

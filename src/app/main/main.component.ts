@@ -12,11 +12,5 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     scrollTo(0, 0);
-    // this.posY = parseFloat(localStorage.getItem('posY'));
-    // window.onscroll = () => {
-    //   if ( window.location.pathname === '/main' && window.scrollY !== 0) {
-    //     localStorage.setItem('posY', String(window.scrollY));
-    //   console.log(window.scrollY);
-    //   }
   }
 }

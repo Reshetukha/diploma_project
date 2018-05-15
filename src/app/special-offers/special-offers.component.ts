@@ -9,7 +9,7 @@ import { CarsService } from '../cars.service';
 })
 export class SpecialOffersComponent implements OnInit {
 
-  cars: CarUnit[];
+  private cars: CarUnit[];
 
   constructor(private carsService: CarsService) { }
 

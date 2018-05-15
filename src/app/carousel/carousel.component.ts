@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { map } from 'rxjs/operators';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 
@@ -13,12 +12,12 @@ import { Observable } from 'rxjs';
 
 export class CarouselComponent implements OnInit {
 
-  imgUri = ['./assets/img/Tesla-logo.png',
+  private imgUri = ['./assets/img/Tesla-logo.png',
             './assets/img/Tesla-presentation-2.jpg',
             './assets/img/Tesla-presentation.jpg',
             './assets/img/Tesla-presentation-3.png'];
 
-  images: Array<string>
+  private images: Array<string>;
 
   constructor(config: NgbCarouselConfig) {
     config.interval = 3000;
