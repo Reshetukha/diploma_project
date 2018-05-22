@@ -17,8 +17,8 @@ export class SitemapComponent implements OnInit {
   private newsIds : number[];
   private carsIds : number[];
 
-  public isCollapsed = true;
-  public isCollapsedCars = true; 
+  public isCollapsed = false;
+  public isCollapsedCars = false; 
 
   ngOnInit() {
     this.getNewsIDs();
