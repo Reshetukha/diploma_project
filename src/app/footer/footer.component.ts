@@ -20,21 +20,16 @@ export class FooterComponent implements OnInit {
     this.subscriptions = [];
   }
 
-  subscribe(): void {
-    console.log('sub= ', this.subscriptionField);
-    if ( this.subscriptionField !== '') {
-      this.subscriptionField = '';
-    }
-  }
-
   open(content) {
-    this.modalService.open(content).result.then((result) => {
-      console.log('close button');
-      this.addSubscription();
-    }, (reason) => {
-      console.log('dismiss');
-      this.addSubscription();
-    });
+    if ( this.subscriptionField !== '' ) {
+      this.modalService.open(content).result.then((result) => {
+        console.log('close button');
+        this.addSubscription();
+      }, (reason) => {
+        console.log('dismiss');
+        this.addSubscription();
+      });
+    }
   }
 
   addSubscription(): void {
