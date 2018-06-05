@@ -6,9 +6,6 @@
                 <p>Підписатися на розсилку новин</p>
                 <div class="row">
                     <input [(ngModel)]="subscriptionField" type="email" class="form-control" id="FormInput" placeholder="введіть Email">
-
-                    <!-- //////////////////////////////////////// -->
-
                     <ng-template #content let-c="close" let-d="dismiss">
                         <div class="modal-header">
                             <h4 class="modal-title">Дякуємо за пiдписку!</h4>
@@ -26,9 +23,6 @@
                     <button class="btn btn-light" (click)="open(content)">Підписатися</button>
                     <hr>
                     <pre>{{closeResult}}</pre>
-
-                    <!-- //////////////////////////////////////// -->
-                    <!-- <button (click)="subscribe()" type="button" class="btn btn-light">Підписатися</button> -->
                 </div>
             </div>
             <div class="col align-right">

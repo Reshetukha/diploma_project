@@ -1,3 +1,3 @@
-/* div.main-background {
-    background-color: #E0E0E0;
-} */
+div.main-background {
+    background-color: inherit;
+}

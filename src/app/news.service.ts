@@ -20,9 +20,20 @@ export class NewsService {
     return Observable.of(NEWS.find( item => item.id === id));
   }
 
-  getNewsIds(): Observable<number[]> {
-    let IDs = [];
-    NEWS.forEach( item => IDs.push(item.id));
-    return Observable.of(IDs);
+  getNewsIds(): Observable<any[]> {
+    let newsIdTitle = [];
+    NEWS.forEach( item => {
+      newsIdTitle.push(new newIdnTitle(item.id, item.title));
+    });
+    return Observable.of(newsIdTitle);
+  }
+}
+
+class newIdnTitle {
+  id : number;
+  title: string;
+  constructor(id, title){
+    this.id = id;
+    this.title = title;
   }
 }

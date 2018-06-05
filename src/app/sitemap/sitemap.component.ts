@@ -14,7 +14,7 @@ export class SitemapComponent implements OnInit {
     private carsService: CarsService
   ) { }
 
-  private newsIds : number[];
+  private newsIds : any[];
   private carsIds : number[];
 
   public isCollapsed = false;

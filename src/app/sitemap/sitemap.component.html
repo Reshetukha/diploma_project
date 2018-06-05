@@ -3,11 +3,11 @@
     <h3>Карта сайту.</h3>
   </div>
   <div class="row">
-    <h4><a routerLink="/main">main</a></h4>
+    <h4><a routerLink="/main">Головна</a></h4>
   </div>
   <div class="row">
     <div>
-      <h4><a routerLink="/news">news</a></h4>
+      <h4><a routerLink="/news">Новини</a></h4>
     </div>
     <button type="button" class="btn btn-sm btn-dark margin-left-15" (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="isCollapsed" aria-controls="collapseNews">
@@ -17,22 +17,22 @@
   <div class="row">
     <div id="collapseNews" [ngbCollapse]="isCollapsed">
       <div *ngIf="newsIds" class="margin-top-30">
-        <div *ngFor='let id of newsIds'>
+        <div *ngFor='let new of newsIds'>
           <div class="margin-left-70">
-            <h5><a routerLink="/news/{{id}}">news/{{id}}</a></h5>
+            <h5><a routerLink="/news/{{new.id}}">{{new.title}}</a></h5>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <h4><a routerLink="/technologies">technologies</a></h4>
+    <h4><a routerLink="/technologies">Технології</a></h4>
   </div>
   <div class="row">
-    <h4><a routerLink="/special_offers">special_offers</a></h4>
+    <h4><a routerLink="/special_offers">Спеціальні пропозиції</a></h4>
   </div>
   <div class="row">
-    <h4>Cars: </h4>
+    <h4>Автомобілі: </h4>
     <button type="button" class="btn btn-sm btn-dark margin-left-15" (click)="isCollapsedCars = !isCollapsedCars"
       [attr.aria-expanded]="isCollapsedCars" aria-controls="collapseCars">
     Детально:
@@ -41,21 +41,21 @@
   <div class="row">
     <div id="collapseCars" [ngbCollapse]="isCollapsedCars">
       <div *ngIf="carsIds" class="margin-top-30">
-        <div *ngFor='let id of carsIds'>
+        <div *ngFor='let car of carsIds'>
           <div class="margin-left-70">
-            <h5><a routerLink="/car/{{id}}">car/{{id}}</a></h5>
+            <h5><a routerLink="/car/{{car.id}}">{{car.title}}</a></h5>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <h4><a routerLink="/about_us">about_us</a></h4>
+    <h4><a routerLink="/about_us">Про нас</a></h4>
   </div>
   <div class="row">
-    <h4><a routerLink="/contacts">contacts</a></h4>
+    <h4><a routerLink="/contacts">Контакти</a></h4>
   </div>
   <div class="row">
-    <h4><a routerLink="/sitemap">sitemap</a></h4>
+    <h4><a routerLink="/sitemap">Карта сайту</a></h4>
   </div>
 </div>

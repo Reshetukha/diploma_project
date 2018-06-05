@@ -16,10 +16,21 @@ export class CarsService {
     return Observable.of(CARS.find( item => item.id === id));
   }
 
-  getCarsIds(): Observable<number[]> {
-    let IDs = [];
-    CARS.forEach( item => IDs.push(item.id));
-    return Observable.of(IDs);
+  getCarsIds(): Observable<any[]> {
+    let carsIdTitle = [];
+    CARS.forEach( item => {
+      carsIdTitle.push(new carIdnTitle(item.id, item.title));
+    });
+    return Observable.of(carsIdTitle);
   }
 
+}
+
+class carIdnTitle {
+  id : number;
+  title: string;
+  constructor(id, title){
+    this.id = id;
+    this.title = title;
+  }
 }

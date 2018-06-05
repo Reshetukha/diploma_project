@@ -1,4 +1,3 @@
-// import {  Injectable, Component, OnInit, OnChanges, ViewChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
 import {  Injectable, Component, OnInit, OnChanges, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 import { sample } from 'rxjs/operator/sample';
@@ -14,8 +13,6 @@ export class DiagrammComponent implements OnInit, OnChanges {
   @ViewChild('chartB') private chartContainerB: ElementRef;
 
   private margin: any = { top: 20, bottom: 20, left: 30, right: 20};
-  // private chartA: any;
-  // private chartB: any;
   private width: number;
   private height: number;
   private xScale: any;
@@ -23,25 +20,14 @@ export class DiagrammComponent implements OnInit, OnChanges {
   private xScaleE: any;
   private xScaleB: any;
   private yScaleB: any;
-  // private colors: any;
   private xAxisE: any;
   private yAxisE: any;
   private xAxisB: any;
   private yAxisB: any;
-  // private xDomainA: any;
-  // private yDomainA: any;
-  // private xDomainB: any;
-  // private yDomainB: any;
   private elPower: any;
   private elTorque: any;
   private BPower: any;
   private BTorque: any;
-  // private rawDataB: any;
-  // private dataA: any;
-  // private dataB: any;
-  // private svg: any;
-
-  // selectedCurve = 'curveLinear';
 
   constructor() { }
 
@@ -103,16 +89,14 @@ export class DiagrammComponent implements OnInit, OnChanges {
     let self = this;
 
     let mylineE = d3.line()
-      .x(function(d: any) { return self.xScaleE(d.x);}) // apply the x scale to the x data
-      .y(function(d: any) { return self.yScaleE(d.y);}) // apply the y scale to the y data
+      .x(function(d: any) { return self.xScaleE(d.x);})
+      .y(function(d: any) { return self.yScaleE(d.y);})
       .curve(d3.curveCardinal);
 
     let mylineB = d3.line()
-      .x(function(d: any) { return self.xScaleB(d.x);}) // apply the x scale to the x data
-      .y(function(d: any) { return self.yScaleB(d.y);}) // apply the y scale to the y data
+      .x(function(d: any) { return self.xScaleB(d.x);})
+      .y(function(d: any) { return self.yScaleB(d.y);})
       .curve(d3.curveCardinal);
-
-    console.log("line(xy) is:", mylineE(this.elPower)); // shows the exact pen moves
 
     this.xAxisE = svgA.append('g')
       .attr('class', 'axis axis-x')
@@ -157,29 +141,29 @@ export class DiagrammComponent implements OnInit, OnChanges {
       .text('kW, NM');
 
     svgA.append("path")
-      .attr("class", "line") // attributes given one at a time
-      .attr("d", mylineE(this.elPower)) // use the value of myline(xy) as the data, 'd'
+      .attr("class", "line")
+      .attr("d", mylineE(this.elPower))
       .style("fill", "none")
       .style("stroke", "black")
       .style("stroke-width", 2);
 
     svgA.append("path")
-      .attr("class", "line") // attributes given one at a time
-      .attr("d", mylineE(this.elTorque)) // use the value of myline(xy) as the data, 'd'
+      .attr("class", "line")
+      .attr("d", mylineE(this.elTorque))
       .style("fill", "none")
       .style("stroke", "red")
       .style("stroke-width", 2);
 
     svgB.append("path")
-      .attr("class", "line") // attributes given one at a time
-      .attr("d", mylineB(this.BPower)) // use the value of myline(xy) as the data, 'd'
+      .attr("class", "line")
+      .attr("d", mylineB(this.BPower))
       .style("fill", "none")
       .style("stroke", "black")
       .style("stroke-width", 2);
 
     svgB.append("path")
-      .attr("class", "line") // attributes given one at a time
-      .attr("d", mylineB(this.BTorque)) // use the value of myline(xy) as the data, 'd'
+      .attr("class", "line")
+      .attr("d", mylineB(this.BTorque))
       .style("fill", "none")
       .style("stroke", "red")
       .style("stroke-width", 2);
